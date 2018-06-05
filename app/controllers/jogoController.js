@@ -42,7 +42,7 @@ module.exports.pergaminhos = function(application, req, res){
 
 module.exports.sair = function(application, req, res){
     req.session.destroy(function(erro){
-        res.render('index', {erros:{}});
+        res.render('index', {erros: {}, dadosUsuario: {}, erro_autenticacao: {}});
     });
 }
 

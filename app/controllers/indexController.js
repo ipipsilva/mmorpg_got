@@ -1,5 +1,5 @@
 module.exports.home = function(application, req, res){
-    res.render('index', {erros: {}});
+    res.render('index', {erros: {}, dadosUsuario: {}, erro_autenticacao: {}});
 }
 
 module.exports.autenticar = function(application, req, res){
@@ -12,7 +12,7 @@ module.exports.autenticar = function(application, req, res){
     var erros = req.validationErrors();
 
     if(erros){
-        res.render('index', {erros: erros});
+        res.render('index', {erros: erros, erro_autenticacao: {}, dadosUsuario: {}});
         return;
     }
 

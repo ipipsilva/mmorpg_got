@@ -25,7 +25,7 @@ UsuariosDAO.prototype.autenticar = function(dadosUsuario, req, res){
                 if(req.session.autorizado){
                     res.redirect('/jogo');
                 } else {
-                    res.render('index', {erros: {}});
+                    res.render('index', {erro_autenticacao:'usuário e / ou senha inválido.', dadosUsuario: dadosUsuario, erros:{}});
                 }
 
             });

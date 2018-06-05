@@ -29,5 +29,5 @@ module.exports.cadastrar = function(application, req, res){
     var JogoDAO = new application.app.models.JogoDAO(connection);
     JogoDAO.gerarParametros(dadosForm.usuario);
 
-    res.redirect('/cadastro');
+    res.render('cadastro_sucesso');
 }
